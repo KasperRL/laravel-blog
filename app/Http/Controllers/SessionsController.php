@@ -12,11 +12,11 @@ class SessionsController extends Controller
     {
         return view('sessions.create');
     }
-    
+
     public function store()
-    {   
+    {
         $attributes = request()->validate([
-            'email' => ['required', 'email'],
+            'username' => ['required'],
             'password' => ['required']
         ]);
 
@@ -25,7 +25,7 @@ class SessionsController extends Controller
                 ['password' => 'Your provided credentials could not be verified.']
             );
         }
-        
+
         session()->regenerate();
         return redirect('/')->with('success', 'Welcome back!');
     }
