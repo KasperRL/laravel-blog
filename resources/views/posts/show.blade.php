@@ -46,7 +46,7 @@
                     </h1>
 
                     <div class="space-y-4 lg:text-lg leading-loose">
-                        {!! $post->body !!}
+                        <p>{{ $post->body }}</p>
                     </div>
 
                     <section class="col-span-8 col-start-5 mt-10 space-y-6">
