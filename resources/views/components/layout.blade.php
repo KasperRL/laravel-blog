@@ -29,7 +29,7 @@
                             <button class="text-xs font-bold uppercase">Welcome, {{ auth()->user()->name }}!</button>
                         </x-slot>
 
-                        <x-dropdown-item href="#">Dashboard</x-dropdown-item>
+                        <x-dropdown-item href="/admin/posts" :active="request()->is('admin/posts')">All posts</x-dropdown-item>
                         <x-dropdown-item href="/admin/posts/create" :active="request()->is('admin/posts/create')">New post</x-dropdown-item>
                         <x-dropdown-item href="#" x-data="{}" @click.prevent="document.querySelector('#logout-form').submit()">Log Out</x-dropdown-item>
 
