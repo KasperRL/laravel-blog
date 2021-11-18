@@ -6,7 +6,7 @@
 
             {{ $posts->links() }}
         @else
-            <p class="text-center">There are no posts here yet. Maybe check back later?</p>
+            <p class="text-center text-white">There are no posts here yet... Maybe check back later?</p>
         @endif
     </main>
 </x-layout>
